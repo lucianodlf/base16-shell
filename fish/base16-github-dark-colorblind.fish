@@ -1,27 +1,27 @@
 #!/usr/bin/env fish
 # tinted-shell (https://github.com/tinted-theming/tinted-shell)
-# Scheme name: Github Dark
+# Scheme name: Github Dark Colorblind
 # Scheme author: Tinted Theming (https://github.com/tinted-theming)
 # Template author: Tinted Theming (https://github.com/tinted-theming)
 
 set -l color00 "0d/11/17" # Base 00 - Black
-set -l color01 "ff/a6/57" # Base 08 - Red
+set -l color01 "fd/ac/54" # Base 08 - Red
 set -l color02 "a5/d6/ff" # Base 0B - Green
 set -l color03 "bb/80/09" # Base 0A - Yellow
 set -l color04 "d2/a8/ff" # Base 0D - Blue
-set -l color05 "ff/7b/72" # Base 0E - Magenta
-set -l color06 "7e/e7/87" # Base 0C - Cyan
+set -l color05 "ec/8e/2c" # Base 0E - Magenta
+set -l color06 "a5/d6/ff" # Base 0C - Cyan
 set -l color07 "c9/d1/d9" # Base 05 - White
 set -l color08 "6e/76/81" # Base 03 - Bright Black
-set -l color09 "ff/7b/72" # Base 12 - Bright Red
-set -l color10 "3f/b9/50" # Base 14 - Bright Green
-set -l color11 "d2/99/22" # Base 13 - Bright Yellow
-set -l color12 "58/a6/ff" # Base 16 - Bright Blue
-set -l color13 "bc/8c/ff" # Base 17 - Bright Magenta
-set -l color14 "33/b3/ae" # Base 15 - Bright Cyan
+set -l color09 "$color01" # Base 08 - Bright Red
+set -l color10 "$color02" # Base 0B - Bright Green
+set -l color11 "$color03" # Base 0A - Bright Yellow
+set -l color12 "$color04" # Base 0D - Bright Blue
+set -l color13 "$color05" # Base 0E - Bright Magenta
+set -l color14 "$color06" # Base 0C - Bright Cyan
 set -l color15 "ff/ff/ff" # Base 07 - Bright White
 set -l color16 "79/c0/ff" # Base 09
-set -l color17 "ff/a1/98" # Base 0F
+set -l color17 "fd/ac/54" # Base 0F
 set -l color18 "16/1b/22" # Base 01
 set -l color19 "48/4f/58" # Base 02
 set -l color20 "8b/94/9e" # Base 04
@@ -94,7 +94,7 @@ if test -n "$ITERM_SESSION_ID"
   put_template_custom Pm 0d1117 # cursor text
 else
   put_template_var 10 $color_foreground
-  if test "$BASE24_SHELL_SET_BACKGROUND" != false
+  if test "$BASE16_SHELL_SET_BACKGROUND" != false
     put_template_var 11 $color_background
     if string match -q 'rxvt*' $TERM
       put_template_var 708 $color_background # internal border (rxvt)
@@ -170,24 +170,24 @@ test -n "$legacy_env"; and set -Ue $legacy_env
 set -e legacy_env
 
 # Set theme
-set -Ux BASE24_THEME github-dark
+set -Ux BASE16_THEME github-dark-colorblind
 
 # Optionally export variables
-if test -n "$TINTED_SHELL_ENABLE_BASE24_VARS"; or test -n "$BASE24_SHELL_ENABLE_VARS"
-  set -gx BASE24_COLOR_00_HEX "0d1117"
-  set -gx BASE24_COLOR_01_HEX "161b22"
-  set -gx BASE24_COLOR_02_HEX "484f58"
-  set -gx BASE24_COLOR_03_HEX "6e7681"
-  set -gx BASE24_COLOR_04_HEX "8b949e"
-  set -gx BASE24_COLOR_05_HEX "c9d1d9"
-  set -gx BASE24_COLOR_06_HEX "f0f6fc"
-  set -gx BASE24_COLOR_07_HEX "ffffff"
-  set -gx BASE24_COLOR_08_HEX "ffa657"
-  set -gx BASE24_COLOR_09_HEX "79c0ff"
-  set -gx BASE24_COLOR_0A_HEX "bb8009"
-  set -gx BASE24_COLOR_0B_HEX "a5d6ff"
-  set -gx BASE24_COLOR_0C_HEX "7ee787"
-  set -gx BASE24_COLOR_0D_HEX "d2a8ff"
-  set -gx BASE24_COLOR_0E_HEX "ff7b72"
-  set -gx BASE24_COLOR_0F_HEX "ffa198"
+if test -n "$TINTED_SHELL_ENABLE_BASE16_VARS"; or test -n "$BASE16_SHELL_ENABLE_VARS"
+  set -gx BASE16_COLOR_00_HEX "0d1117"
+  set -gx BASE16_COLOR_01_HEX "161b22"
+  set -gx BASE16_COLOR_02_HEX "484f58"
+  set -gx BASE16_COLOR_03_HEX "6e7681"
+  set -gx BASE16_COLOR_04_HEX "8b949e"
+  set -gx BASE16_COLOR_05_HEX "c9d1d9"
+  set -gx BASE16_COLOR_06_HEX "f0f6fc"
+  set -gx BASE16_COLOR_07_HEX "ffffff"
+  set -gx BASE16_COLOR_08_HEX "fdac54"
+  set -gx BASE16_COLOR_09_HEX "79c0ff"
+  set -gx BASE16_COLOR_0A_HEX "bb8009"
+  set -gx BASE16_COLOR_0B_HEX "a5d6ff"
+  set -gx BASE16_COLOR_0C_HEX "a5d6ff"
+  set -gx BASE16_COLOR_0D_HEX "d2a8ff"
+  set -gx BASE16_COLOR_0E_HEX "ec8e2c"
+  set -gx BASE16_COLOR_0F_HEX "fdac54"
 end

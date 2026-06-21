@@ -1,17 +1,17 @@
 #!/usr/bin/env sh
 # tinted-shell (https://github.com/tinted-theming/tinted-shell)
-# Scheme name: Github Dark
+# Scheme name: Github Dark Colorblind
 # Scheme author: Tinted Theming (https://github.com/tinted-theming)
 # Template author: Tinted Theming (https://github.com/tinted-theming)
-export BASE16_THEME=github-dark
+export BASE16_THEME=github-dark-colorblind
 
 color00="0d/11/17" # Base 00 - Black
-color01="ff/a6/57" # Base 08 - Red
+color01="fd/ac/54" # Base 08 - Red
 color02="a5/d6/ff" # Base 0B - Green
 color03="bb/80/09" # Base 0A - Yellow
 color04="d2/a8/ff" # Base 0D - Blue
-color05="ff/7b/72" # Base 0E - Magenta
-color06="7e/e7/87" # Base 0C - Cyan
+color05="ec/8e/2c" # Base 0E - Magenta
+color06="a5/d6/ff" # Base 0C - Cyan
 color07="c9/d1/d9" # Base 05 - White
 color08="6e/76/81" # Base 03 - Bright Black
 color09="$color01" # Base 08 - Bright Red
@@ -22,7 +22,7 @@ color13="$color05" # Base 0E - Bright Magenta
 color14="$color06" # Base 0C - Bright Cyan
 color15="ff/ff/ff" # Base 07 - Bright White
 color16="79/c0/ff" # Base 09
-color17="ff/a1/98" # Base 0F
+color17="fd/ac/54" # Base 0F
 color18="16/1b/22" # Base 01
 color19="48/4f/58" # Base 02
 color20="8b/94/9e" # Base 04
@@ -141,12 +141,12 @@ if [ -n "$TINTED_SHELL_ENABLE_BASE16_VARS" ] || [ -n "$BASE16_SHELL_ENABLE_VARS"
   export BASE16_COLOR_05_HEX="c9d1d9"
   export BASE16_COLOR_06_HEX="f0f6fc"
   export BASE16_COLOR_07_HEX="ffffff"
-  export BASE16_COLOR_08_HEX="ffa657"
+  export BASE16_COLOR_08_HEX="fdac54"
   export BASE16_COLOR_09_HEX="79c0ff"
   export BASE16_COLOR_0A_HEX="bb8009"
   export BASE16_COLOR_0B_HEX="a5d6ff"
-  export BASE16_COLOR_0C_HEX="7ee787"
+  export BASE16_COLOR_0C_HEX="a5d6ff"
   export BASE16_COLOR_0D_HEX="d2a8ff"
-  export BASE16_COLOR_0E_HEX="ff7b72"
-  export BASE16_COLOR_0F_HEX="ffa198"
+  export BASE16_COLOR_0E_HEX="ec8e2c"
+  export BASE16_COLOR_0F_HEX="fdac54"
 fi
